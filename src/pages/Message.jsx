@@ -7,8 +7,9 @@ const Message = () => {
         e.preventDefault();
         setLoading(true);
 
-        const botToken = "8761488279:AAEFMI11n5PqVCgN9o5BO2Mza9_x70-ZfxE";
-        const chatId = "6251843484";
+        const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+        const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+
 
         const name = e.target.user_name.value;
         const email = e.target.user_email.value;
