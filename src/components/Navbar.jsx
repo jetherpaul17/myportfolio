@@ -23,7 +23,7 @@ const Navbar = () => {
                     className="h-10 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
                 />
 
-                {/* Mobile Menu Button */}
+                {/* mobile screen menu */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="md:hidden text-gray-900"
@@ -34,7 +34,7 @@ const Navbar = () => {
                     </svg>
                 </button>
 
-                {/* Desktop Menu */}
+                {/* desktop menu */}
                 <ul className="hidden md:flex flex-wrap items-center justify-center gap-15 text-gray-900 font-medium text-sm">
                     <li>
                         <a
@@ -77,7 +77,7 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                {/* Phone + Icon */}
+                {/* message me and phone number */}
                 <div className="hidden md:flex text-gray-900 items-center gap-2 font-medium text-sm">
 
                     +63-915-751-1119
@@ -112,7 +112,7 @@ const Navbar = () => {
 
             </div>
 
-            {/* Mobile Dropdown */}
+            {/* mobile screen menu */}
             {menuOpen && (
                 <div className="md:hidden bg-gray-200 shadow-lg">
                     <ul className="flex flex-col items-center py-4 text-gray-900 font-medium text-sm">

@@ -39,7 +39,7 @@ const Experiences = () => {
       </h1>
 
       <div className="relative max-w-4xl mx-auto">
-        {/* Vertical Line */}
+        {/* orange line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-orange-600"></div>
 
         {timeline.map((item, index) => {
@@ -51,14 +51,14 @@ const Experiences = () => {
                 isLeft ? 'flex-row-reverse' : 'flex-row'
               }`}
             >
-              {/* Content Box */}
+              {/* content box */}
               <div className="bg-gray-900 p-4 md:p-6 rounded-md shadow-[0_4px_8px_rgba(234,88,12,0.7)] w-11/12 md:w-5/12">
                 <p className="text-gray-200 font-medium text-xs md:text-sm mb-1">{item.date}</p>
                 <h3 className="text-lg md:text-2xl font-bold text-gray-200 mb-2">{item.title}</h3>
                 <p className="text-gray-200 text-sm md:text-base">{item.description}</p>
               </div>
 
-              {/* Timeline Dot */}
+              {/* orange dot */}
               <div
                 className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full ${item.color}`}
               ></div>

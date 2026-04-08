@@ -21,7 +21,7 @@ const Home = () => {
           </div>
           <div className="bg-orange-600 rounded-3xl p-6 md:p-8 h-auto md:h-55 lg:h-60 flex flex-col md:flex-row justify-center items-center gap-4">
 
-            {/* Logos Grid */}
+            {/* socials */}
             <div className="grid grid-cols-2 grid-rows-2 gap-2 p-5 justify-items-center">
 
               <a
@@ -62,7 +62,7 @@ const Home = () => {
 
             </div>
 
-            {/* Text */}
+            {/* work position text */}
             <div className="flex items-center justify-center md:justify-start">
               <h1 className="text-3xl md:text-5xl text-gray-200 p-5 text-center md:text-left">
                 Full Stack Developer <br />
