@@ -1,10 +1,10 @@
 
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import Services from "./pages/Services";
-import Experiences from "./pages/Experiences";
-import Projects from "./pages/Projects";
-import Message from "./pages/Message";
+import Home from "./pages/Home.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Services from "./pages/Services.jsx";
+import Experiences from "./pages/Experiences.jsx";
+import Projects from "./pages/Projects.jsx";
+import Message from "./pages/Message.jsx";
 
 
 
