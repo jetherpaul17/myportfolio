@@ -40,10 +40,10 @@ export default function Services() {
     <div id="services" className="relative bg-gray-900 w-full min-h-dvh flex flex-col items-center px-4 py-12 overflow-y-auto">
       <h1 className="text-4xl font-bold text-gray-200 mb-8 pt-20">Services</h1>
 
-      {/* SHARED WRAPPER */}
+      {/* div for menu and content  box */}
       <div className="w-full max-w-4xl flex flex-col items-center">
 
-        {/* BUTTON GROUP */}
+        {/* content menu */}
         <nav className="flex w-full overflow-x-auto no-scrollbar">
           <button
             onClick={() => setActive("fullstack")}
@@ -86,7 +86,7 @@ export default function Services() {
           </button>
         </nav>
 
-        {/* CONTENT BOX */}
+        {/* content box */}
         <div className="mt-6 w-full bg-gray-800 border border-gray-700 rounded-xl p-6 text-gray-200 shadow-xl transition-all">
           {active === "fullstack" && (
             <div>

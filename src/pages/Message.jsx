@@ -46,7 +46,7 @@ const Message = () => {
 
     return (
         <div>
-            {/* Contact Info */}
+            {/* message me section */}
             <section className="my-12 px-4 md:px-12" id="contact">
                 <h3 className="text-center text-gray-900 font-bold text-3xl md:text-4xl mb-12">
                     Message <span className="text-orange-600">Me.</span>
@@ -65,7 +65,7 @@ const Message = () => {
                         />
                     </div>
 
-                    {/* Contact Form */}
+                    {/* message me form */}
                     <form
                         onSubmit={sendToTelegram}
                         className="md:w-1/2 lg:w-1/3 bg-gray-800 p-6 rounded-xl flex flex-col gap-4"
@@ -107,7 +107,7 @@ const Message = () => {
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* footer */}
             <footer className="text-center py-6 mt-15 bg-gray-900">
                 <p className="text-gray-400 font-semibold">
                     &copy; 2026 Jether Paul Quintana.{" "}
