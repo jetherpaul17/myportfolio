@@ -37,7 +37,7 @@ export default function Services() {
   const [active, setActive] = useState("fullstack");
 
   return (
-    <div id="services" className="relative bg-gray-900 w-full min-h-dvh lg:h-[140vh] flex flex-col items-center px-4 py-12">
+    <div id="services" className="relative bg-gray-900 w-full min-h-dvh lg:h-[110vh] flex flex-col items-center px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-200 mb-8 pt-20">Services</h1>
 
       {/* div for menu and content  box */}
