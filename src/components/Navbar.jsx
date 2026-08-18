@@ -105,7 +105,7 @@ export default function Navbar({ onOpenCommandPalette }) {
               </span>
               <span className="text-[10px] sm:text-[11px] font-mono text-orange-400/90 tracking-wider flex items-center gap-1.5 mt-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
-                <span>VA &middot; FRONT END DEV</span>
+                <span>VA &middot; FRONT END WEB DEVELOPER</span>
               </span>
             </div>
           </a>

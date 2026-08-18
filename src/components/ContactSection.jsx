@@ -10,7 +10,9 @@ import {
   MessageSquare,
   Copy,
   Check,
-  Bot
+  Bot,
+  Phone,
+  Cake
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PERSONAL_INFO } from '../data/portfolioData';
@@ -31,12 +33,20 @@ export default function ContactSection() {
   });
 
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleCopyEmail = () => {
     soundFx.playSuccess();
     navigator.clipboard.writeText(PERSONAL_INFO.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
+  };
+
+  const handleCopyPhone = () => {
+    soundFx.playSuccess();
+    navigator.clipboard.writeText(PERSONAL_INFO.phone || '+639157511119');
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2500);
   };
 
   const handleSubmit = async (e) => {
@@ -161,6 +171,36 @@ ${formData.message}
                     {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   </button>
                 </div>
+              </div>
+
+              <div className="flex items-center justify-between p-3 rounded-2xl bg-[#101728] border border-gray-800 gap-2">
+                <div className="flex items-center gap-2 text-gray-300 shrink-0">
+                  <Phone className="w-4 h-4 text-orange-400 shrink-0" />
+                  <span>Mobile:</span>
+                </div>
+                <div className="flex items-center gap-2 overflow-hidden">
+                  <a 
+                    href={`tel:${PERSONAL_INFO.phone || '+639157511119'}`}
+                    className="text-orange-300 hover:text-white font-semibold truncate text-[11px] sm:text-xs transition-colors"
+                  >
+                    {PERSONAL_INFO.formattedPhone || '+63 915 751 1119'}
+                  </a>
+                  <button
+                    onClick={handleCopyPhone}
+                    title="Copy Phone"
+                    className="p-1.5 rounded-lg bg-gray-800 hover:bg-orange-600 text-gray-300 hover:text-white cursor-pointer shrink-0"
+                  >
+                    {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between p-3 rounded-2xl bg-[#101728] border border-gray-800 gap-2">
+                <div className="flex items-center gap-2 text-gray-300 shrink-0">
+                  <Cake className="w-4 h-4 text-orange-400 shrink-0" />
+                  <span>Birthday:</span>
+                </div>
+                <span className="text-gray-300 text-right text-[11px] sm:text-xs truncate">{PERSONAL_INFO.birthday || 'September 11, 1999'}</span>
               </div>
 
               <div className="flex items-center justify-between p-3 rounded-2xl bg-[#101728] border border-gray-800 gap-2">

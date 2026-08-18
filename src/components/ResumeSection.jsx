@@ -154,7 +154,7 @@ export default function ResumeSection() {
               <iframe
                 src={RESUME_DATA.embedUrl}
                 className="w-full h-full border-0"
-                title="Jether Paul Quintana Resume Google Drive Preview"
+                title="Jether Paul T. Quintana Resume Google Drive Preview"
                 allow="autoplay"
               />
 

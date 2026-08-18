@@ -14,7 +14,7 @@ export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const categories = ['All', 'Frontend', 'Web Design'];
+  const categories = ['All', 'Front End Web Developer', 'Web Design'];
 
   const filteredProjects = activeFilter === 'All'
     ? PROJECTS

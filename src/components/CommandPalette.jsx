@@ -218,7 +218,7 @@ export default function CommandPalette({ isOpen, onClose }) {
 
             {/* Footer */}
             <div className="p-3 bg-[#080c14] border-t border-gray-800 flex items-center justify-between text-[11px] font-mono text-gray-500">
-              <span>Navigation HUD &middot; Jether Paul Quintana</span>
+              <span>Navigation HUD &middot; Jether Paul T. Quintana</span>
               <kbd className="bg-gray-800 px-2 py-0.5 rounded text-gray-400">ESC to close</kbd>
             </div>
           </motion.div>

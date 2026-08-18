@@ -97,7 +97,7 @@ export default function Hero() {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[11px] sm:text-xs font-mono mb-3 sm:mb-4">
                   <Bot className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                  <span>VIRTUAL ASSISTANT &amp; FRONT END</span>
+                  <span>VIRTUAL ASSISTANT &amp; FRONT END WEB DEVELOPER</span>
                 </div>
 
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
@@ -165,12 +165,25 @@ export default function Hero() {
               <div className="w-full h-full relative rounded-[22px] overflow-hidden bg-gradient-to-b from-orange-500/30 to-[#0c1220] flex items-center justify-center min-h-[250px]">
                 {!imageError ? (
                   <img
-                    src={pfpImage || PERSONAL_INFO.avatarUrl}
+                    src={PERSONAL_INFO.avatarUrl || '/profilepic.PNG'}
                     alt={PERSONAL_INFO.name}
+                    loading="eager"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      if (!e.currentTarget.dataset.fallback) {
-                        e.currentTarget.dataset.fallback = 'true';
-                        e.currentTarget.src = '/pfp.png';
+                      const currentStep = Number(e.currentTarget.dataset.step || '0');
+                      if (currentStep === 0) {
+                        e.currentTarget.dataset.step = '1';
+                        e.currentTarget.src = '/profilepic.png';
+                      } else if (currentStep === 1) {
+                        e.currentTarget.dataset.step = '2';
+                        e.currentTarget.src = pfpImage || '/pfp.png';
+                      } else if (currentStep === 2) {
+                        e.currentTarget.dataset.step = '3';
+                        e.currentTarget.src = 'https://raw.githubusercontent.com/jetherpaul17/myportfolio/main/src/assets/pfp.png';
+                      } else if (currentStep === 3) {
+                        e.currentTarget.dataset.step = '4';
+                        e.currentTarget.src = 'https://avatars.githubusercontent.com/u/200079974?v=4';
                       } else {
                         setImageError(true);
                       }
@@ -182,21 +195,21 @@ export default function Hero() {
                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-orange-500/20 border border-orange-400 flex items-center justify-center mb-3 text-xl sm:text-2xl font-extrabold text-orange-400">
                       JPQ
                     </div>
-                    <span className="font-heading font-bold text-base sm:text-lg text-white">Jether Paul Quintana</span>
-                    <span className="text-xs font-mono text-orange-300 mt-1">Virtual Assistant</span>
+                    <span className="font-heading font-bold text-base sm:text-lg text-white">Jether Paul T. Quintana</span>
+                    <span className="text-xs font-mono text-orange-300 mt-1">Virtual Assistant &amp; Front End Web Developer</span>
                   </div>
                 )}
 
                 {/* Cyber Scanline overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080c14] via-transparent to-transparent opacity-80 pointer-events-none" />
 
-                {/* Floating HUD badge */}
-                <div className="absolute bottom-3 inset-x-3 bg-[#0a0f1d]/90 backdrop-blur-md border border-orange-500/30 rounded-xl p-2 sm:p-2.5 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    <span className="text-gray-200 font-medium text-[11px] sm:text-xs">Virtual Assistant</span>
+                {/* Floating Profile Identity Badge */}
+                <div className="absolute bottom-3 inset-x-3 bg-[#0a0f1d]/95 backdrop-blur-md border border-orange-500/30 rounded-xl p-2.5 flex items-center justify-between text-xs shadow-lg">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                    <span className="text-white font-bold text-xs sm:text-sm font-heading truncate">Jether Paul T. Quintana</span>
                   </div>
-                  <span className="font-mono text-[10px] sm:text-[11px] text-orange-400">Front End Web Dev</span>
+                  <span className="px-2 py-0.5 rounded-md bg-orange-500/20 border border-orange-500/40 text-[10px] sm:text-[11px] font-mono text-orange-400 shrink-0 font-semibold">Verified</span>
                 </div>
               </div>
             </motion.div>
@@ -273,10 +286,10 @@ export default function Hero() {
 
             {/* Quick Skills Pills */}
             <div className="mt-4 sm:mt-5 flex flex-wrap gap-1.5">
-              {['Virtual Assistant', 'Front End Web Dev', 'React.js', 'ClickUp', 'Canva', 'Photoshop', 'Moderation'].map((tag) => (
+              {['Virtual Assistant', 'Front End Web Developer', '5+ Yrs Exp', '700+ Daily Mod', 'React.js', 'ClickUp', 'Canva', 'Photoshop'].map((tag) => (
                 <span
                   key={tag}
-                  className="px-2.5 py-1 rounded-lg bg-[#141c2e] border border-gray-700/60 text-[10px] sm:text-[11px] font-mono text-orange-300/90"
+                  className="px-2.5 py-1 rounded-lg bg-[#141c2e] border border-gray-700/60 text-[10px] sm:text-[11px] font-mono text-orange-300/90 font-medium"
                 >
                   {tag}
                 </span>

@@ -1,17 +1,22 @@
 export const PERSONAL_INFO = {
-  name: 'Jether Paul Quintana',
+  name: 'Jether Paul T. Quintana',
   firstName: 'Jether Paul',
+  middleInitial: 'T.',
   roles: [
     'Virtual Assistant',
     'Front End Web Developer',
     'Content Moderator & CX Specialist'
   ],
   title: 'Virtual Assistant & Front End Web Developer',
+  phone: '+639157511119',
+  formattedPhone: '+63 915 751 1119',
+  birthday: 'September 11, 1999',
+  birthDate: '1999-09-11',
   email: 'jetherquintana@gmail.com',
   secondaryEmail: '5a2quint@gmail.com',
   location: 'Consuelo, Cantilan, Surigao del Sur, Philippines',
   timezone: 'GMT+8 (PHT)',
-  status: 'Available for Virtual Assistant & Front End Roles',
+  status: 'Available for Virtual Assistant & Front End Web Developer Roles',
   bio: "I'm a dedicated Virtual Assistant and Front End Web Developer ready to help you streamline workflows and bring your digital vision to life. I specialize in comprehensive administrative support, task & workflow automation, graphic design, and responsive, interactive frontend web development.",
   avatarUrl: '/profilepic.PNG',
   logoUrl: '/logo.svg',
@@ -26,10 +31,10 @@ export const PERSONAL_INFO = {
     facebook: 'https://www.facebook.com/jetherpaul.quintana',
   },
   stats: [
-    { label: 'Years Experience', value: '4+' },
-    { label: 'Items Moderated/Shift', value: '400+' },
+    { label: 'Years Experience', value: '5+' },
+    { label: 'Items Moderated Daily', value: '700+' },
     { label: 'Daily UK Tickets Resolved', value: '100+' },
-    { label: 'Core Specialty', value: 'VA & Front End' },
+    { label: 'Core Specialty', value: 'VA & Front End Web Developer' },
   ]
 };
 
@@ -37,10 +42,10 @@ export const PROJECTS = [
   {
     id: 'cinecast',
     title: 'Cinecast',
-    category: 'Frontend',
+    category: 'Front End Web Developer',
     description: 'A sleek movie discovery platform built with React featuring modern UI/UX, real-time browsing, responsive design, and fluid transitions.',
     longDescription: 'Cinecast is a modern movie explorer client built to demonstrate cutting-edge frontend architecture, responsive layouts, intuitive search & filter interfaces, and fluid user interactions.',
-    videoSrc: 'https://jetherquintana.vercel.app/assets/cinecast-DXkqttaO.mp4',
+    videoSrc: '/cinecast.mp4',
     imageSrc: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=80',
     liveUrl: 'https://movie-app-client-ebon-eta.vercel.app/',
     githubUrl: 'https://github.com/jetherpaul17',
@@ -51,10 +56,10 @@ export const PROJECTS = [
   {
     id: 'philbound',
     title: 'Philbound.ph',
-    category: 'Frontend',
+    category: 'Front End Web Developer',
     description: 'A comprehensive Philippine real estate platform for browsing properties, searching listings, exploring details, and connecting directly with agents.',
     longDescription: 'Contributed to the frontend development, responsive design systems, property search mechanics, and agent contact workflows for a production Philippine real estate platform.',
-    videoSrc: 'https://jetherquintana.vercel.app/assets/philbound-mobile2-CIT23nVr.mp4',
+    videoSrc: '/philbound-mobile2.mp4',
     imageSrc: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80',
     liveUrl: 'https://philbound.ph',
     githubUrl: 'https://github.com/jetherpaul17',
@@ -68,7 +73,7 @@ export const PROJECTS = [
     category: 'Web Design',
     description: 'A clean and elegant portfolio website showcasing foundational web projects, layout mastery, and early frontend work.',
     longDescription: 'A custom portfolio demonstrating solid semantic HTML, CSS architecture, responsive typography, and design evolution.',
-    videoSrc: 'https://jetherquintana.vercel.app/assets/portfolio-YJNi0CO2.mp4',
+    videoSrc: '/portfolio.mp4',
     imageSrc: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80',
     liveUrl: 'https://jetherpaul17.github.io/webportfolio/',
     githubUrl: 'https://github.com/jetherpaul17/webportfolio',
@@ -82,16 +87,16 @@ export const EXPERIENCES = [
   {
     id: 'exp-1',
     period: 'Oct 2020 – Dec 2025',
-    role: 'Content Moderator',
+    role: 'Content Moderator & Trust Safety Specialist',
     company: 'Trust & Safety Operations',
     type: 'Full-time / Shift Operations',
-    description: 'Reviewed and evaluated user-generated content to ensure alignment with platform policy guidelines, consistently maintaining a safe and compliant online environment.',
+    description: 'Reviewed and evaluated user-generated content to ensure alignment with platform policy guidelines, consistently maintaining a safe and compliant online environment across 5+ years.',
     highlights: [
-      'Flagged and processed an average of 400+ high-volume items per shift for further review or removal with exceptional precision.',
+      'Flagged and processed an average of 700+ high-volume items daily for review or removal with top-tier precision.',
       'Demonstrated rigorous attention to policy nuances, safety guidelines, and turnaround times under strict SLA targets.',
       'Collaborated closely with team leads and quality assurance to enhance moderation accuracy and optimize workflow queues.'
     ],
-    skills: ['Policy Enforcement', 'Content Moderation', 'Risk Mitigation', 'Quality Assurance', 'High Turnaround']
+    skills: ['Policy Enforcement', 'Content Moderation (700+/day)', 'Risk Mitigation', 'Quality Assurance', 'High Turnaround']
   },
   {
     id: 'exp-2',
@@ -234,8 +239,8 @@ export const SERVICES_DATA = [
 export const RESUME_DATA = {
   driveUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/view?usp=sharing',
   embedUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/preview',
-  fileName: 'Jether_Paul_Quintana_Resume.pdf',
-  summary: 'Dedicated Virtual Assistant and Front End Web Developer with proven expertise in remote operational support, digital asset creation, high-throughput content moderation, international customer support, and modern React web development. Adept at boosting executive efficiency, managing complex workflows, and crafting responsive user interfaces.',
+  fileName: 'Jether_Paul_T_Quintana_Resume.pdf',
+  summary: 'Dedicated Virtual Assistant and Front End Web Developer with 5+ years proven expertise in remote operational support, digital asset creation, high-throughput content moderation (700+ daily), international customer support, and modern React web development. Adept at boosting executive efficiency, managing complex workflows, and crafting responsive user interfaces.',
   education: [
     {
       degree: 'Bachelor of Science in Information Technology (BSIT)',
@@ -256,7 +261,7 @@ export const RESUME_DATA = {
     },
     { 
       title: 'Operations & Customer Experience', 
-      items: ['High-Volume Moderation (400+/shift)', 'Policy Compliance & Risk Mitigation', 'Ticketing & CRM Systems', 'UK Customer Support (100+ daily)', 'Quality Assurance (QA)'] 
+      items: ['High-Volume Moderation (700+ daily)', 'Policy Compliance & Risk Mitigation', 'Ticketing & CRM Systems', 'UK Customer Support (100+ daily)', 'Quality Assurance (QA)'] 
     },
   ],
   certificationsAndTraining: [
