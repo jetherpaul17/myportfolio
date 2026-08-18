@@ -18,6 +18,7 @@ import {
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { soundFx } from '../utils/audio';
 import InteractiveMatrixVisualizer from './InteractiveMatrixVisualizer';
+import pfpImage from '../assets/pfp.png';
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -164,9 +165,16 @@ export default function Hero() {
               <div className="w-full h-full relative rounded-[22px] overflow-hidden bg-gradient-to-b from-orange-500/30 to-[#0c1220] flex items-center justify-center min-h-[250px]">
                 {!imageError ? (
                   <img
-                    src={PERSONAL_INFO.avatarUrl}
+                    src={pfpImage || PERSONAL_INFO.avatarUrl}
                     alt={PERSONAL_INFO.name}
-                    onError={() => setImageError(true)}
+                    onError={(e) => {
+                      if (!e.currentTarget.dataset.fallback) {
+                        e.currentTarget.dataset.fallback = 'true';
+                        e.currentTarget.src = '/pfp.png';
+                      } else {
+                        setImageError(true);
+                      }
+                    }}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (

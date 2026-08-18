@@ -75,11 +75,11 @@ export default function Navbar({ onOpenCommandPalette }) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
           scrolled
-            ? 'py-2.5 sm:py-3 bg-[#080c14]/95 backdrop-blur-xl border-orange-500/20 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
-            : 'py-3.5 sm:py-4.5 bg-transparent border-transparent'
+            ? 'py-2.5 sm:py-3 bg-[#080c14]/95 backdrop-blur-xl border-orange-500/20 shadow-[0_4px_30px_rgba(0,0,0,0.7)]'
+            : 'py-3 sm:py-3.5 bg-[#080c14]/80 backdrop-blur-md border-gray-800/60'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 xl:gap-6">
           {/* Left Brand Div */}
           <a
             href="#home"
@@ -100,18 +100,18 @@ export default function Navbar({ onOpenCommandPalette }) {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-heading font-bold text-sm sm:text-base lg:text-lg text-gray-100 group-hover:text-orange-400 transition-colors leading-tight">
+              <span className="font-heading font-bold text-sm sm:text-base text-gray-100 group-hover:text-orange-400 transition-colors leading-tight">
                 {PERSONAL_INFO.name}
               </span>
               <span className="text-[10px] sm:text-[11px] font-mono text-orange-400/90 tracking-wider flex items-center gap-1.5 mt-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
-                VA &middot; FRONT END WEB DEVELOPER
+                <span>VA &middot; FRONT END DEV</span>
               </span>
             </div>
           </a>
 
           {/* Middle Nav Items Div */}
-          <nav className="hidden lg:flex items-center gap-1 bg-[#0d1322]/90 border border-orange-500/20 rounded-full px-3 py-1.5 backdrop-blur-md shadow-inner shrink-0">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-[#0d1322]/90 border border-orange-500/20 rounded-full px-2 xl:px-3 py-1.5 backdrop-blur-md shadow-inner">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeSection === item.id;
@@ -121,7 +121,7 @@ export default function Navbar({ onOpenCommandPalette }) {
                   href={`#${item.id}`}
                   onClick={(e) => handleNavClick(e, item.id)}
                   onMouseEnter={() => soundFx.playHover()}
-                  className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                  className={`relative px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
                       ? 'text-white font-semibold'
                       : 'text-gray-400 hover:text-gray-200'
@@ -136,7 +136,7 @@ export default function Navbar({ onOpenCommandPalette }) {
                   )}
                   <span className="relative z-10 flex items-center gap-1.5">
                     <Icon className="w-3.5 h-3.5" />
-                    {item.label}
+                    <span>{item.label}</span>
                   </span>
                 </a>
               );
