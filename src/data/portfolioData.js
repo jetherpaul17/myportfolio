@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
   timezone: 'GMT+8 (PHT)',
   status: 'Available for Virtual Assistant & Front End Roles',
   bio: "I'm a dedicated Virtual Assistant and Front End Web Developer ready to help you streamline workflows and bring your digital vision to life. I specialize in comprehensive administrative support, task & workflow automation, graphic design, and responsive, interactive frontend web development.",
-  avatarUrl: '/pfp.png',
+  avatarUrl: '/profilepic.PNG',
   logoUrl: '/logo.svg',
   resumeUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/view?usp=sharing',
   resumeEmbedUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/preview',
