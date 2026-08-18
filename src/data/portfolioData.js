@@ -35,7 +35,7 @@ export const PERSONAL_INFO = {
     { label: 'Years Experience', value: '5+' },
     { label: 'Items Moderated Daily', value: '700+' },
     { label: 'Daily UK Tickets Resolved', value: '100+' },
-    { label: 'Core Specialty', value: 'VA & Front End Web Developer' },
+    { label: 'Core Specialty', value: 'Admin Support & Design' },
   ]
 };
 
