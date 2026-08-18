@@ -18,7 +18,6 @@ import {
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { soundFx } from '../utils/audio';
 import InteractiveMatrixVisualizer from './InteractiveMatrixVisualizer';
-import pfpImage from '../assets/pfp.png';
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
