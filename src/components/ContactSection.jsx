@@ -332,20 +332,27 @@ ${formData.message}
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={status.submitting}
-                  className="w-full py-3 sm:py-3.5 px-6 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-semibold text-xs sm:text-sm shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
-                >
-                  {status.submitting ? (
-                    <span>Encrypting &amp; Dispatching...</span>
-                  ) : (
-                    <>
-                      <span>Send Message to Jether</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
+                <div className="flex justify-end mt-25">
+                  <button
+                    type="submit"
+                    disabled={status.submitting}
+                    className="py-3 px-6 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 
+                              hover:from-orange-500 hover:to-amber-500 text-white font-semibold 
+                              text-xs sm:text-sm shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all 
+                              flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    {status.submitting ? (
+                      <span>Encrypting &amp; Dispatching...</span>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <Send className="w-4 h-4" />
+                      </>
+                    )}
+                  </button>
+                </div>
+
+
               </form>
             </div>
           </div>
