@@ -89,13 +89,14 @@ export const EXPERIENCES = [
     id: 'exp-1',
     period: 'Oct 2020 – Dec 2025',
     role: 'Content Moderator',
-    company: 'Trust & Safety Operations',
+    company: 'TaskUs / Meta Platforms (Facebook, Instagram, Threads)',
     type: 'Full-time / Hybrid',
     description: 'Reviewed and evaluated user-generated content to ensure alignment with platform policy guidelines, consistently maintaining a safe and compliant online environment across 5+ years.',
     highlights: [
       'Flagged and processed an average of 700+ high-volume items daily for review or removal with top-tier precision.',
       'Demonstrated rigorous attention to policy nuances, safety guidelines, and turnaround times under strict SLA targets.',
-      'Collaborated closely with team leads and quality assurance to enhance moderation accuracy and optimize workflow queues.'
+      'Collaborated closely with team leads and quality assurance to enhance moderation accuracy and optimize workflow queues.',
+      'Top performer for several months in terms of accurate review of different types of content.'
     ],
     skills: ['Policy Enforcement', 'Content Moderation (700+/day)', 'Risk Mitigation', 'Quality Assurance', 'High Turnaround']
   },
@@ -103,13 +104,13 @@ export const EXPERIENCES = [
     id: 'exp-2',
     period: 'Sep 2025 – Nov 2025',
     role: 'Virtual Assistant',
-    company: 'Client Operations (Executive Support)',
+    company: 'Upwork',
     type: 'Contract / Remote',
-    description: 'Delivered comprehensive administrative support and digital collateral creation to streamline executive workflows and boost brand communication.',
+    description: 'AI‑Creative Virtual Assistant specializing in illustration generation, image editing, and graphic design.',
     highlights: [
-      'Created engaging digital graphics and social media materials to improve client brand communication.',
-      'Conducted in-depth market and business research to support executive decision-making and content planning.',
-      'Executed scheduling, file management, and documentation with 100% on-time delivery.'
+      'Used AI applications like ChatGPT and Copilot to generate comic illustrations based on the script and resources given.',
+      'Edited and enhanced images provided by the client in Adobe Photoshop.',
+      'Created beautiful covers for a brand using Canva and Adobe Photoshop.'
     ],
     skills: ['Virtual Assistance', 'Executive Support', 'Social Media Graphics', 'Web Research', 'Workflow Automation']
   },
@@ -117,13 +118,14 @@ export const EXPERIENCES = [
     id: 'exp-3',
     period: 'Jun 2019 – Aug 2020',
     role: 'Customer Service Associate',
-    company: 'International Support Services',
+    company: 'Accenture / Virgin Media (UK-based Customer Support)',
     type: 'Full-time / Onsite',
     description: 'Handled 100+ daily inquiries from UK-based customers, addressing complex concerns related to billing, sales, and technical support with clarity and professionalism.',
     highlights: [
       'Maintained top-tier customer satisfaction ratings while resolving over 100 tickets/calls per day.',
       'Leveraged advanced CRM systems for precise documentation, ticket tracking, and multi-department escalation.',
-      'Improved team resolution efficiency by creating standardized response templates.'
+      'Upsold multiple products and subscriptions to our customers.',
+      'Awarded Most Improved during a one-month training period.'
     ],
     skills: ['Customer Experience (CX)', 'CRM Software', 'Technical Troubleshooting', 'Billing Support', 'Ticket Resolution']
   },
@@ -131,7 +133,7 @@ export const EXPERIENCES = [
     id: 'exp-4',
     period: 'Dec 2018 – Feb 2019',
     role: 'Internship: Office Staff & IT Shadowing',
-    company: 'Administrative & Technical Support',
+    company: 'Tetco',
     type: 'Internship',
     description: 'Managed office supplies and maintained official documentation to support daily operations, while shadowing senior IT staff to learn hardware and network troubleshooting.',
     highlights: [
