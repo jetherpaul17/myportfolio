@@ -5,7 +5,8 @@ export const PERSONAL_INFO = {
   roles: [
     'Virtual Assistant',
     'Front End Web Developer',
-    'Content Moderator & CX Specialist'
+    'Content Moderator',
+    'Customer Service Associate'
   ],
   title: 'Virtual Assistant & Front End Web Developer',
   phone: '+639157511119',
@@ -17,7 +18,7 @@ export const PERSONAL_INFO = {
   location: 'Consuelo, Cantilan, Surigao del Sur, Philippines',
   timezone: 'GMT+8 (PHT)',
   status: 'Available for Virtual Assistant & Front End Web Developer Roles',
-  bio: "I'm a dedicated Virtual Assistant and Front End Web Developer ready to help you streamline workflows and bring your digital vision to life. I specialize in comprehensive administrative support, task & workflow automation, graphic design, and responsive, interactive frontend web development.",
+  bio: "I'm ready to help you streamline workflows and bring your digital vision to life. I specialize in comprehensive administrative support, task & workflow automation, graphic design, and responsive, interactive frontend web development.",
   avatarUrl: '/profilepic.PNG',
   logoUrl: '/logo.svg',
   resumeUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/view?usp=sharing',
@@ -87,9 +88,9 @@ export const EXPERIENCES = [
   {
     id: 'exp-1',
     period: 'Oct 2020 – Dec 2025',
-    role: 'Content Moderator & Trust Safety Specialist',
+    role: 'Content Moderator',
     company: 'Trust & Safety Operations',
-    type: 'Full-time / Shift Operations',
+    type: 'Full-time / Hybrid',
     description: 'Reviewed and evaluated user-generated content to ensure alignment with platform policy guidelines, consistently maintaining a safe and compliant online environment across 5+ years.',
     highlights: [
       'Flagged and processed an average of 700+ high-volume items daily for review or removal with top-tier precision.',
@@ -117,7 +118,7 @@ export const EXPERIENCES = [
     period: 'Jun 2019 – Aug 2020',
     role: 'Customer Service Associate',
     company: 'International Support Services',
-    type: 'Full-time / UK Operations',
+    type: 'Full-time / Onsite',
     description: 'Handled 100+ daily inquiries from UK-based customers, addressing complex concerns related to billing, sales, and technical support with clarity and professionalism.',
     highlights: [
       'Maintained top-tier customer satisfaction ratings while resolving over 100 tickets/calls per day.',

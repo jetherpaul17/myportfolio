@@ -96,7 +96,7 @@ export default function Hero() {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[11px] sm:text-xs font-mono mb-3 sm:mb-4">
                   <Bot className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                  <span>VIRTUAL ASSISTANT &amp; FRONT END WEB DEVELOPER</span>
+                  <span>Full-Time, Part-Time &amp; Contract Roles | Remote</span>
                 </div>
 
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
