@@ -79,7 +79,7 @@ export default function Navbar({ onOpenCommandPalette }) {
             : 'py-3 sm:py-3.5 bg-[#080c14]/80 backdrop-blur-md border-gray-800/60'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 xl:gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-3 xl:gap-6">
           {/* Left Brand Div */}
           <a
             href="#home"
