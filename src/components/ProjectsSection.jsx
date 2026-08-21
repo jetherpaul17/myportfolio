@@ -160,23 +160,9 @@ export default function ProjectsSection() {
                 onMouseEnter={() => soundFx.playHover()}
                 className="flex-1 py-2 sm:py-2.5 px-3.5 sm:px-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-semibold shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all flex items-center justify-center gap-1.5 group/btn cursor-pointer"
               >
-                <span>Launch App</span>
+                <span>Open Project</span>
                 <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
               </a>
-
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => soundFx.playClick()}
-                  onMouseEnter={() => soundFx.playHover()}
-                  title="Source Code"
-                  className="p-2 sm:p-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 hover:text-white transition-colors cursor-pointer shrink-0"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
-              )}
             </div>
           </motion.div>
         ))}
@@ -190,12 +176,26 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.92 }}
-              className="bg-[#0b101e] border border-orange-500/40 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-5 sm:p-8 shadow-2xl relative"
+              className="
+                mt-10
+                bg-[#0b101e] border border-orange-500/40 rounded-3xl 
+                w-full 
+                max-h-[85vh] 
+                overflow-y-auto 
+                p-5 sm:p-8 shadow-2xl relative
+
+                max-w-md      /* mobile */
+                sm:max-w-lg   /* small screens */
+                md:max-w-xl   /* tablets */
+                lg:max-w-2xl  /* desktops */
+                xl:max-w-3xl  /* large desktops */
+              "
             >
+
               <button
                 onClick={() => {
                   soundFx.playClick();
-                  setSelectedProject(null);
+                  setSelectedProject(null); 
                 }}
                 className="absolute top-4 right-4 p-2 rounded-xl bg-gray-800 text-gray-400 hover:text-white border border-gray-700 cursor-pointer"
               >
@@ -255,7 +255,7 @@ export default function ProjectsSection() {
                   rel="noopener noreferrer"
                   className="flex-1 py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(249,115,22,0.4)] cursor-pointer"
                 >
-                  <span>Open Live Application</span>
+                  <span>Open Project</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
