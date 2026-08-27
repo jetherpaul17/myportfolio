@@ -164,7 +164,7 @@ export default function Hero() {
               <div className="w-full h-full relative rounded-[22px] overflow-hidden bg-gradient-to-b from-orange-500/30 to-[#0c1220] flex items-center justify-center min-h-[250px]">
                 {!imageError ? (
                   <img
-                    src={PERSONAL_INFO.avatarUrl || '/profilepic.PNG'}
+                    src={PERSONAL_INFO.avatarUrl || '/profilePicture.png'}
                     alt={PERSONAL_INFO.name}
                     loading="eager"
                     decoding="async"
@@ -173,10 +173,10 @@ export default function Hero() {
                       const currentStep = Number(e.currentTarget.dataset.step || '0');
                       if (currentStep === 0) {
                         e.currentTarget.dataset.step = '1';
-                        e.currentTarget.src = '/profilepic.png';
+                        e.currentTarget.src = '/profilePicture.png';
                       } else if (currentStep === 1) {
                         e.currentTarget.dataset.step = '2';
-                        e.currentTarget.src = pfpImage || '/pfp.png';
+                        e.currentTarget.src = pfpImage || '/profilePicture.png';
                       } else if (currentStep === 2) {
                         e.currentTarget.dataset.step = '3';
                         e.currentTarget.src = 'https://raw.githubusercontent.com/jetherpaul17/myportfolio/main/src/assets/pfp.png';
