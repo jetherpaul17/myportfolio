@@ -50,12 +50,13 @@ export default function InteractiveMatrixVisualizer() {
   // Main proficient tools requested by user (no percentages, clean and minimal)
   const mainTools = [
     { name: 'Canva', color: '#06b6d4' },
+    { name: 'Figma', color: '#c1121f' },
+    { name: 'ClickUp', color: '#a855f7' },
     { name: 'HTML5', color: '#f97316' },
     { name: 'CSS3', color: '#38bdf8' },
     { name: 'JavaScript', color: '#facc15' },
     { name: 'React.js', color: '#61dafb' },
-    { name: 'HubSpot', color: '#ff7a59' },
-    { name: 'ClickUp', color: '#a855f7' },
+    { name: 'HubSpot', color: '#ff7a59' }
   ];
 
   return (

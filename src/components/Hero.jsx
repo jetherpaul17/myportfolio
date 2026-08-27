@@ -153,65 +153,72 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Box 2: Profile Picture in Signature Orange Container (5 cols) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="sm:col-span-5 bg-gradient-to-br from-orange-600 to-amber-600 rounded-3xl p-1 relative overflow-hidden shadow-2xl group min-h-[260px] sm:min-h-full flex flex-col justify-end"
-            >
-              {/* Internal card container */}
-              <div className="w-full h-full relative rounded-[22px] overflow-hidden bg-gradient-to-b from-orange-500/30 to-[#0c1220] flex items-center justify-center min-h-[250px]">
-                {!imageError ? (
-                  <img
-                    src={PERSONAL_INFO.avatarUrl || '/profilePicture.png'}
-                    alt={PERSONAL_INFO.name}
-                    loading="eager"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      const currentStep = Number(e.currentTarget.dataset.step || '0');
-                      if (currentStep === 0) {
-                        e.currentTarget.dataset.step = '1';
-                        e.currentTarget.src = '/profilePicture.png';
-                      } else if (currentStep === 1) {
-                        e.currentTarget.dataset.step = '2';
-                        e.currentTarget.src = pfpImage || '/profilePicture.png';
-                      } else if (currentStep === 2) {
-                        e.currentTarget.dataset.step = '3';
-                        e.currentTarget.src = 'https://raw.githubusercontent.com/jetherpaul17/myportfolio/main/src/assets/pfp.png';
-                      } else if (currentStep === 3) {
-                        e.currentTarget.dataset.step = '4';
-                        e.currentTarget.src = 'https://avatars.githubusercontent.com/u/200079974?v=4';
-                      } else {
-                        setImageError(true);
-                      }
-                    }}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="w-full h-full min-h-[240px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-orange-600/40 to-[#0c1322]">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-orange-500/20 border border-orange-400 flex items-center justify-center mb-3 text-xl sm:text-2xl font-extrabold text-orange-400">
-                      JPQ
-                    </div>
-                    <span className="font-heading font-bold text-base sm:text-lg text-white">Jether Paul T. Quintana</span>
-                    <span className="text-xs font-mono text-orange-300 mt-1">Virtual Assistant &amp; Front End Web Developer</span>
-                  </div>
-                )}
+{/* Box 2: Profile Picture in Signature Orange Container (Transparent + Thick Orange Border) */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.96 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5, delay: 0.1 }}
+  className="sm:col-span-5 rounded-3xl p-1 border-4 border-orange-500 shadow-2xl group min-h-[260px] sm:min-h-full flex flex-col justify-end bg-transparent"
+>
+  {/* Internal card container */}
+  <div className="w-full h-full relative rounded-[22px] overflow-hidden bg-transparent flex items-center justify-center min-h-[250px]">
+    {!imageError ? (
+      <img
+        src={PERSONAL_INFO.avatarUrl || '/profilePicture.png'}
+        alt={PERSONAL_INFO.name}
+        loading="eager"
+        decoding="async"
+        referrerPolicy="no-referrer"
+        onError={(e) => {
+          const currentStep = Number(e.currentTarget.dataset.step || '0');
+          if (currentStep === 0) {
+            e.currentTarget.dataset.step = '1';
+            e.currentTarget.src = '/profilePicture.png';
+          } else if (currentStep === 1) {
+            e.currentTarget.dataset.step = '2';
+            e.currentTarget.src = pfpImage || '/profilePicture.png';
+          } else if (currentStep === 2) {
+            e.currentTarget.dataset.step = '3';
+            e.currentTarget.src = 'https://raw.githubusercontent.com/jetherpaul17/myportfolio/main/src/assets/pfp.png';
+          } else if (currentStep === 3) {
+            e.currentTarget.dataset.step = '4';
+            e.currentTarget.src = 'https://avatars.githubusercontent.com/u/200079974?v=4';
+          } else {
+            setImageError(true);
+          }
+        }}
+        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+      />
+    ) : (
+      <div className="w-full h-full min-h-[240px] flex flex-col items-center justify-center p-6 text-center bg-transparent">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-orange-500/20 border border-orange-400 flex items-center justify-center mb-3 text-xl sm:text-2xl font-extrabold text-orange-400">
+          JPQ
+        </div>
+        <span className="font-heading font-bold text-base sm:text-lg text-white">
+          Jether Paul T. Quintana
+        </span>
+        <span className="text-xs font-mono text-orange-300 mt-1">
+          Virtual Assistant &amp; Front End Web Developer
+        </span>
+      </div>
+    )}
 
-                {/* Cyber Scanline overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080c14] via-transparent to-transparent opacity-80 pointer-events-none" />
+    {/* Floating Profile Identity Badge */}
+    <div className="absolute bottom-3 inset-x-3 backdrop-blur-md border border-orange-500/30 rounded-xl p-2.5 flex items-center justify-between text-xs shadow-lg bg-transparent">
+      <div className="flex items-center gap-2 min-w-0">
+        <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+        <span className="text-white font-bold text-xs sm:text-sm font-heading truncate">
+          Jether Paul T. Quintana
+        </span>
+      </div>
+      <span className="px-2 py-0.5 rounded-md bg-orange-500/20 border border-orange-500/40 text-[10px] sm:text-[11px] font-mono text-orange-400 shrink-0 font-semibold">
+        Verified
+      </span>
+    </div>
+  </div>
+</motion.div>
 
-                {/* Floating Profile Identity Badge */}
-                <div className="absolute bottom-3 inset-x-3 bg-[#0a0f1d]/95 backdrop-blur-md border border-orange-500/30 rounded-xl p-2.5 flex items-center justify-between text-xs shadow-lg">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                    <span className="text-white font-bold text-xs sm:text-sm font-heading truncate">Jether Paul T. Quintana</span>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-md bg-orange-500/20 border border-orange-500/40 text-[10px] sm:text-[11px] font-mono text-orange-400 shrink-0 font-semibold">Verified</span>
-                </div>
-              </div>
-            </motion.div>
+
           </div>
 
           {/* Roles & Social Links Card */}

@@ -171,8 +171,7 @@ export const SERVICES_DATA = [
       { name: 'Google Workspace', category: 'Office', iconName: 'Folder', color: '#4285F4', level: '95%', description: 'Docs, Sheets, Drive, Gmail & Calendar' },
       { name: 'Microsoft Word', category: 'Office', iconName: 'FileText', color: '#2B579A', level: '96%', description: 'Professional document formatting' },
       { name: 'Microsoft Excel', category: 'Office', iconName: 'Table', color: '#217346', level: '88%', description: 'Data entry, formulas & spreadsheets' },
-      { name: 'MS PowerPoint', category: 'Office', iconName: 'Presentation', color: '#D24726', level: '92%', description: 'Pitch decks & slide presentations' },
-      { name: 'Upwork', category: 'Platform', iconName: 'Briefcase', color: '#14A800', level: '95%', description: 'Client communication & delivery' }
+      { name: 'MS PowerPoint', category: 'Office', iconName: 'Presentation', color: '#D24726', level: '92%', description: 'Pitch decks & slide presentations' }
     ]
   },
   {
@@ -187,6 +186,7 @@ export const SERVICES_DATA = [
       'Clean semantic code, cross-browser compatibility, and fast loading performance'
     ],
     tools: [
+      { name: 'Figma', category: 'Design', iconName: 'Figma', color: '#F24E1E', level: '85%', description: 'UI mockups, design tokens & assets' },
       { name: 'React.js', category: 'Frontend', iconName: 'Atom', color: '#61DAFB', level: '94%', description: 'Modern components, hooks & state' },
       { name: 'Tailwind CSS', category: 'Styling', iconName: 'Sparkles', color: '#06B6D4', level: '96%', description: 'Utility-first rapid UI styling' },
       { name: 'JavaScript', category: 'Languages', iconName: 'Cpu', color: '#F7DF1E', level: '92%', description: 'ES6+, async/await, DOM APIs' },
@@ -196,7 +196,6 @@ export const SERVICES_DATA = [
       { name: 'Git', category: 'DevOps', iconName: 'GitBranch', color: '#F05032', level: '90%', description: 'Version control & repository management' },
       { name: 'GitHub', category: 'DevOps', iconName: 'Github', color: '#FFFFFF', level: '92%', description: 'Source code hosting & deployments' },
       { name: 'Vercel', category: 'Cloud', iconName: 'Cloud', color: '#FFFFFF', level: '90%', description: 'Production deployment & hosting' },
-      { name: 'Figma', category: 'Design', iconName: 'Figma', color: '#F24E1E', level: '85%', description: 'UI mockups, design tokens & assets' },
       { name: 'Postman', category: 'DevTools', iconName: 'Send', color: '#FF6C37', level: '88%', description: 'API testing & client integration' },
       { name: 'VS Code', category: 'DevTools', iconName: 'Terminal', color: '#007ACC', level: '98%', description: 'Primary frontend coding environment' }
     ]
@@ -213,7 +212,7 @@ export const SERVICES_DATA = [
       'Resilient, focused evaluation of nuanced user-generated text, image, and video content'
     ],
     tools: [
-      { name: 'Facebook Moderation', category: 'Platform', iconName: 'Facebook', color: '#1877F2', level: '98%', description: 'Meta policy enforcement' },
+      { name: 'Facebook', category: 'Platform', iconName: 'Facebook', color: '#1877F2', level: '98%', description: 'Meta policy enforcement' },
       { name: 'Instagram', category: 'Platform', iconName: 'Instagram', color: '#E4405F', level: '95%', description: 'Visual & story moderation' },
       { name: 'Threads', category: 'Platform', iconName: 'AtSign', color: '#FFFFFF', level: '92%', description: 'Real-time discussion filtering' },
       { name: 'Quality Auditing Tools', category: 'Internal', iconName: 'ShieldCheck', color: '#FF6B18', level: '94%', description: 'Accuracy review & metrics' }
