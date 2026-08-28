@@ -57,7 +57,7 @@ export const PROJECTS = [
   {
     id: 'philbound',
     title: 'Philbound.ph',
-    category: 'Front End Web Developer',
+    category: 'Pending',
     description: 'A comprehensive Philippine real estate platform for browsing properties, searching listings, exploring details, and connecting directly with agents.',
     longDescription: 'Contributed to the frontend development, responsive design systems, property search mechanics, and agent contact workflows for a production Philippine real estate platform.',
     videoSrc: '/philbound-mobile2.mp4',

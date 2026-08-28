@@ -14,7 +14,7 @@ export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const categories = ['All', 'Front End Web Developer', 'Web Design'];
+  const categories = ['All', 'Graphic Design', 'Web Design', 'Others'];
 
   const filteredProjects = activeFilter === 'All'
     ? PROJECTS
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
           Featured <span className="text-orange-500 neon-text-glow">Projects</span>
         </h2>
         <p className="mt-3 text-gray-400 text-sm sm:text-base leading-relaxed">
-          Interactive web applications, production client solutions, and frontend interfaces.
+          Frontend interfaces, graphic designs, and other creative works.
         </p>
       </div>
 
