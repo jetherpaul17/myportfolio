@@ -35,7 +35,7 @@ export const PERSONAL_INFO = {
     { label: 'Years Experience', value: '5+' },
     { label: 'Items Moderated Daily', value: '700+' },
     { label: 'Daily UK Tickets Resolved', value: '100+' },
-    { label: 'Core Specialty', value: 'Admin Support & Design' },
+    { label: 'Core Specialty', value: 'Support & Web Development' },
   ]
 };
 
@@ -43,9 +43,9 @@ export const PROJECTS = [
   {
     id: 'cinecast',
     title: 'Cinecast',
-    category: 'Front End Web Developer',
-    description: 'A sleek movie discovery platform built with React featuring modern UI/UX, real-time browsing, responsive design, and fluid transitions.',
-    longDescription: 'Cinecast is a modern movie explorer client built to demonstrate cutting-edge frontend architecture, responsive layouts, intuitive search & filter interfaces, and fluid user interactions.',
+    category: 'Pending',
+    description: 'Currently in development.',
+    longDescription: 'Will Update soon...',
     videoSrc: '/cinecast.mp4',
     imageSrc: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=80',
     liveUrl: 'https://movie-app-client-ebon-eta.vercel.app/',
@@ -58,8 +58,8 @@ export const PROJECTS = [
     id: 'philbound',
     title: 'Philbound.ph',
     category: 'Pending',
-    description: 'A comprehensive Philippine real estate platform for browsing properties, searching listings, exploring details, and connecting directly with agents.',
-    longDescription: 'Contributed to the frontend development, responsive design systems, property search mechanics, and agent contact workflows for a production Philippine real estate platform.',
+    description: 'Currently in development.',
+    longDescription: 'Will Update soon...',
     videoSrc: '/philbound-mobile2.mp4',
     imageSrc: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80',
     liveUrl: 'https://philbound.ph',
@@ -71,7 +71,7 @@ export const PROJECTS = [
   {
     id: 'portfolio-static',
     title: 'Old Static Portfolio',
-    category: 'Web Design',
+    category: 'Pending',
     description: 'A clean and elegant portfolio website showcasing foundational web projects, layout mastery, and early frontend work.',
     longDescription: 'A custom portfolio demonstrating solid semantic HTML, CSS architecture, responsive typography, and design evolution.',
     videoSrc: '/portfolio.mp4',
@@ -151,10 +151,10 @@ export const SERVICES_DATA = [
     tagline: 'Reliable Executive, Operational & Creative Support',
     description: 'I provide dedicated virtual assistant services to empower businesses and executives. From in-depth research, email and calendar management, and CRM maintenance to creative digital graphics, video editing, and automated workflows, I ensure seamless daily operations.',
     bulletPoints: [
-      'Executive calendar, email inbox management, and daily operational support',
-      'Comprehensive web research, competitor analysis, and market data synthesis',
-      'Digital collateral creation: social media graphics, slide presentations, and video edits',
-      'Project management, task tracking, and workflow automation in ClickUp & Trello'
+      'Customer support and client assistance across chat, email, and social platforms',
+      'Accurate data entry, record management, and spreadsheet organization using Google Sheets & Excel',
+      'Basic graphic design for social media posts, reports, and digital materials',
+      'Task coordination, documentation, and workflow support for daily operations'
     ],
     tools: [
       { name: 'ClickUp', category: 'Management', iconName: 'CheckSquare', color: '#7B68EE', level: '95%', description: 'Task hierarchy, docs & custom automation' },
@@ -164,13 +164,11 @@ export const SERVICES_DATA = [
       { name: 'Gemini', category: 'AI Support', iconName: 'Sparkles', color: '#4E87F8', level: '96%', description: 'Advanced AI reasoning & multimodal prompting' },
       { name: 'Google AI Studio', category: 'AI Support', iconName: 'Cpu', color: '#1A73E8', level: '94%', description: 'Prototyping & prompt engineering' },
       { name: 'ChatGPT', category: 'AI Support', iconName: 'Bot', color: '#10A37F', level: '95%', description: 'Prompting, research, drafting & copywriting' },
-      { name: 'Slack', category: 'Communication', iconName: 'MessageSquare', color: '#ECB22E', level: '95%', description: 'Team messaging & channel organization' },
-      { name: 'HubSpot', category: 'CRM & Marketing', iconName: 'Users', color: '#FF7A59', level: '90%', description: 'CRM pipelines & contact management' },
       { name: 'Trello', category: 'Management', iconName: 'Kanban', color: '#0052CC', level: '92%', description: 'Agile task boards & project sprints' },
       { name: 'Figma', category: 'Design & Media', iconName: 'Figma', color: '#F24E1E', level: '88%', description: 'UI mockups & wireframe collaboration' },
       { name: 'Google Workspace', category: 'Office', iconName: 'Folder', color: '#4285F4', level: '95%', description: 'Docs, Sheets, Drive, Gmail & Calendar' },
-      { name: 'Microsoft Word', category: 'Office', iconName: 'FileText', color: '#2B579A', level: '96%', description: 'Professional document formatting' },
-      { name: 'Microsoft Excel', category: 'Office', iconName: 'Table', color: '#217346', level: '88%', description: 'Data entry, formulas & spreadsheets' },
+      { name: 'MS Word', category: 'Office', iconName: 'FileText', color: '#2B579A', level: '96%', description: 'Professional document formatting' },
+      { name: 'MS Excel', category: 'Office', iconName: 'Table', color: '#217346', level: '88%', description: 'Data entry, formulas & spreadsheets' },
       { name: 'MS PowerPoint', category: 'Office', iconName: 'Presentation', color: '#D24726', level: '92%', description: 'Pitch decks & slide presentations' }
     ]
   },
@@ -206,7 +204,7 @@ export const SERVICES_DATA = [
     tagline: 'Trust, Safety & Policy Compliance',
     description: 'Experienced in high-volume moderation, policy enforcement, quality checks, risk identification, and maintaining safe, compliant online communities across global social platforms.',
     bulletPoints: [
-      'High-volume throughput (400+ processed items per shift with minimal error rate)',
+      'High-volume throughput (700+ processed items per shift with minimal error rate)',
       'Deep familiarity with community guidelines, copyright, hate speech, and safety protocols',
       'Real-time incident escalation and cross-team quality calibration',
       'Resilient, focused evaluation of nuanced user-generated text, image, and video content'
@@ -231,8 +229,6 @@ export const SERVICES_DATA = [
     ],
     tools: [
       { name: 'CRM & Ticketing Systems', category: 'Support', iconName: 'Headphones', color: '#FF6B18', level: '96%', description: 'Zendesk / Salesforce / Freshdesk' },
-      { name: 'Live Chat Support', category: 'Support', iconName: 'MessageSquare', color: '#06B6D4', level: '95%', description: 'Instant resolution & multi-chat' },
-      { name: 'Email & SLA Management', category: 'Support', iconName: 'Mail', color: '#10B981', level: '94%', description: 'Fast response & organized queues' },
       { name: 'De-escalation & CX', category: 'Communication', iconName: 'HeartHandshake', color: '#EC4899', level: '98%', description: 'Empathetic resolution methods' }
     ]
   }
@@ -254,8 +250,8 @@ export const RESUME_DATA = {
   ],
   coreCompetencies: [
     { 
-      title: 'Virtual Assistance & Operations', 
-      items: ['Executive Workflow & Task Management', 'AI & Prompt Engineering (Gemini, Google AI Studio, ChatGPT)', 'Project Management (ClickUp, Trello, Slack)', 'Creative Design (Canva, Photoshop, Figma)', 'Video Editing (CapCut)', 'CRM & Lead Management (HubSpot)', 'Google Workspace & MS Office Suite'] 
+      title: 'Virtual Assistance', 
+      items: ['Creative Design (Canva, Photoshop, Figma)', 'Video Editing (CapCut)','Google Workspace & MS Office Suite'] 
     },
     { 
       title: 'Front End Web Development', 
@@ -263,13 +259,12 @@ export const RESUME_DATA = {
     },
     { 
       title: 'Operations & Customer Experience', 
-      items: ['High-Volume Moderation (700+ daily)', 'Policy Compliance & Risk Mitigation', 'Ticketing & CRM Systems', 'UK Customer Support (100+ daily)', 'Quality Assurance (QA)'] 
+      items: ['High-Volume Moderation (700+ daily)', 'Policy Compliance & Risk Mitigation', 'Ticketing & CRM Systems', 'UK Customer Support (100+ daily)'] 
     },
   ],
   certificationsAndTraining: [
-    'Virtual Assistant & Workflow Automation Excellence',
-    'Meta Trust & Safety & Policy Compliance Certification',
-    'Front End Web Development & React UI Engineering',
-    'Advanced Customer Experience & Escalation Resolution'
+    'Customer Service & Support Training (Accenture / Virgin Media)',
+    'Meta Trust & Safety & Policy Compliance Training',
+    'Full MERN Stack End Web Development Training (React, Node.js, Express, MongoDB)',
   ]
 };
