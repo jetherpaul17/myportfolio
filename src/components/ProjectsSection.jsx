@@ -10,11 +10,46 @@ import {
 import { PROJECTS } from '../data/portfolioData';
 import { soundFx } from '../utils/audio';
 
+function getGoogleDriveVideoUrl(source) {
+  const match = source?.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+  return match ? `https://drive.google.com/uc?export=download&id=${match[1]}` : null;
+}
+
+function ProjectMedia({ project, className }) {
+  const videoUrl = getGoogleDriveVideoUrl(project.videoSrc) || project.videoSrc;
+
+  if (videoUrl) {
+    return (
+      <video
+        src={videoUrl}
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls={false}
+        controlsList="nodownload noplaybackrate"
+        disablePictureInPicture
+        onContextMenu={(event) => event.preventDefault()}
+        draggable={false}
+        className={className}
+      />
+    );
+  }
+
+  return (
+    <img
+      src={project.imageSrc}
+      alt={project.title}
+      className={className}
+    />
+  );
+}
+
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const categories = ['All', 'Graphic Design', 'Web Design', 'Video Editing', 'Others'];
+  const categories = ['All', 'Website', 'Graphic Design', 'Video Editing', 'Others'];
 
   const filteredProjects = activeFilter === 'All'
     ? PROJECTS
@@ -79,22 +114,10 @@ export default function ProjectsSection() {
             <div>
               {/* Media Preview Container (Video / Image) */}
               <div className="relative w-full aspect-[16/10] bg-[#080c14] overflow-hidden border-b border-gray-800">
-                {project.videoSrc ? (
-                  <video
-                    src={project.videoSrc}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <img
-                    src={project.imageSrc}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                )}
+                <ProjectMedia
+                  project={project}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
 
                 {/* Cyber Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1220] via-transparent to-transparent opacity-60 pointer-events-none" />
@@ -203,22 +226,10 @@ export default function ProjectsSection() {
               </button>
 
               <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black mb-5 border border-gray-800">
-                {selectedProject.videoSrc ? (
-                  <video
-                    src={selectedProject.videoSrc}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <img
-                    src={selectedProject.imageSrc}
-                    alt={selectedProject.title}
-                    className="w-full h-full object-cover"
-                  />
-                )}
+                <ProjectMedia
+                  project={selectedProject}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="flex items-center gap-2 mb-2">

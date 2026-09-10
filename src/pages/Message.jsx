@@ -7,10 +7,6 @@ const Message = () => {
         e.preventDefault();
         setLoading(true);
 
-        const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-        const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
-
-
         const name = e.target.user_name.value;
         const email = e.target.user_email.value;
         const message = e.target.message.value;
@@ -24,15 +20,15 @@ const Message = () => {
         `;
 
         try {
-            await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            const response = await fetch("/api/send-telegram", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    chat_id: chatId,
-                    text: text,
-                    parse_mode: "Markdown"
+                    message: text,
                 })
             });
+
+            if (!response.ok) throw new Error("Telegram request failed");
 
             alert("Message sent!");
             e.target.reset();

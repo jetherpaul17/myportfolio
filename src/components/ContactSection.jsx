@@ -72,17 +72,13 @@ ${formData.message}
 ━━━━━━━━━━━━━━━━━━━━
 ⏰ *Time:* ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Manila' })} PHT`;
 
-      const telegramUrl = `https://api.telegram.org/bot${PERSONAL_INFO.telegramBotToken}/sendMessage`;
-      
-      const response = await fetch(telegramUrl, {
+      const response = await fetch('/api/send-telegram', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          chat_id: PERSONAL_INFO.telegramChatId,
-          text: telegramMessage,
-          parse_mode: 'Markdown',
+          message: telegramMessage,
         }),
       });
 
@@ -98,24 +94,15 @@ ${formData.message}
         setStatus({ submitting: false, success: true, error: null });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        // Fallback email link trigger if Telegram API is rate-limited
-        throw new Error('Direct Telegram gateway busy. Launching client mailer...');
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || 'Telegram gateway rejected the message.');
       }
     } catch (err) {
       console.error(err);
-      // Construct mailto link fallback
-      const mailtoLink = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(
-        formData.subject || `Inquiry from ${formData.name}`
-      )}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )}`;
-      
-      window.location.href = mailtoLink;
-
       setStatus({
         submitting: false,
-        success: true,
-        error: 'Telegram dispatch routed to direct mail client.',
+        success: false,
+        error: err.message || 'Message could not be sent to Telegram. Please try again later.',
       });
     }
   };

@@ -23,8 +23,6 @@ export const PERSONAL_INFO = {
   logoUrl: '/logo.svg',
   resumeUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/view?usp=sharing',
   resumeEmbedUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/preview',
-  telegramBotToken: '8761488279:AAEFMI11n5PqVCgN9o5BO2Mza9_x70-ZfxE',
-  telegramChatId: '6251843484',
   socials: {
     github: 'https://github.com/jetherpaul17',
     linkedin: 'https://www.linkedin.com/in/jethplane17/',
@@ -51,7 +49,7 @@ export const PROJECTS = [
     liveUrl: 'https://movie-app-client-ebon-eta.vercel.app/',
     githubUrl: 'https://github.com/jetherpaul17',
     tags: ['React.js', 'Tailwind CSS', 'Vite', 'REST API', 'UI/UX Design'],
-    featured: true,
+    featured: false,
     metrics: 'Fast 60fps animations & mobile-first UI'
   },
   {
@@ -65,22 +63,35 @@ export const PROJECTS = [
     liveUrl: 'https://philbound.ph',
     githubUrl: 'https://github.com/jetherpaul17',
     tags: ['React.js', 'Tailwind CSS', 'Real Estate Tech', 'Mobile Responsive', 'Lead Gen'],
-    featured: true,
+    featured: false,
     metrics: 'Multi-device responsive property directory'
   },
   {
     id: 'portfolio-static',
     title: 'Old Static Portfolio',
-    category: 'Pending',
+    category: 'Website',
     description: 'A clean and elegant portfolio website showcasing foundational web projects, layout mastery, and early frontend work.',
     longDescription: 'A custom portfolio demonstrating solid semantic HTML, CSS architecture, responsive typography, and design evolution.',
-    videoSrc: '/portfolio.mp4',
+    videoSrc: '/website-1.mp4',
     imageSrc: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80',
     liveUrl: 'https://jetherpaul17.github.io/webportfolio/',
     githubUrl: 'https://github.com/jetherpaul17/webportfolio',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages', 'Minimalist'],
     featured: false,
     metrics: 'Lightweight static deployment'
+  },
+    {
+    id: 'edited-videos',
+    title: 'Edited Videos',
+    category: 'Video Editing',
+    description: 'A collection of edited videos for my portfolio.',
+    longDescription: 'Showcasing my video editing skills with a variety of projects from different industries.',
+    videoSrc: '/edited-videos.mp4',
+    imageSrc: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80',
+    liveUrl: 'https://drive.google.com/drive/folders/1vgl5UqoCltrtNxzIhBVyLvwqfzGN5mIy?usp=drive_link',
+    tags: ['Capcut', 'Photoshop', 'Canva', 'Google AI Studio', 'Video Editing', 'Google Flow AI'],
+    featured: false,
+    metrics: 'Generated and edited videos for my porfolio'
   }
 ];
 
