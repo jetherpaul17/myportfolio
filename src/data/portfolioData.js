@@ -58,7 +58,7 @@ export const PROJECTS = [
     category: 'Pending',
     description: 'Currently in development.',
     longDescription: 'Will Update soon...',
-    videoSrc: '/in-dev.mp4',
+    videoSrc: null,
     imageSrc: '/in-dev.png',
     liveUrl: 'https://philbound.ph',
     githubUrl: 'https://github.com/jetherpaul17',

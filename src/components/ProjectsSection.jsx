@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Sparkles, 
   ExternalLink, 
   Github, 
   Maximize2, 
-  X 
+  X,
+  Cog
 } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import { soundFx } from '../utils/audio';
@@ -15,17 +16,68 @@ function getGoogleDriveVideoUrl(source) {
   return match ? `https://drive.google.com/uc?export=download&id=${match[1]}` : null;
 }
 
+function DevelopmentMedia({ className }) {
+  return (
+    <div className={`${className} relative overflow-hidden bg-gray-300`} aria-label="Project in development">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative flex h-28 w-28 items-center justify-center">
+          <Cog className="h-20 w-20 animate-[spin_4s_linear_infinite] text-orange-500" strokeWidth={1.5} />
+          <span className="absolute top-24 whitespace-nowrap text-[10px] font-mono uppercase tracking-[0.2em] text-gray-600">
+            In Development
+          </span>
+        </div>
+      </div>
+      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-gray-500">
+        <span>Build status</span>
+        <span className="text-orange-400">In progress</span>
+      </div>
+    </div>
+  );
+}
+
 function ProjectMedia({ project, className }) {
   const videoUrl = getGoogleDriveVideoUrl(project.videoSrc) || project.videoSrc;
+  const mediaRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const mediaElement = mediaRef.current;
+    if (!mediaElement || !videoUrl) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+
+    observer.observe(mediaElement);
+    return () => observer.disconnect();
+  }, [videoUrl]);
+
+  useEffect(() => {
+    const videoElement = mediaRef.current;
+    if (!videoElement || videoElement.tagName !== 'VIDEO') return undefined;
+
+    if (isVisible) {
+      videoElement.play().catch(() => {});
+    } else {
+      videoElement.pause();
+    }
+  }, [isVisible]);
+
+  if (project.category === 'Pending') {
+    return <DevelopmentMedia className={className} />;
+  }
 
   if (videoUrl) {
     return (
       <video
-        src={videoUrl}
-        autoPlay
+        ref={mediaRef}
+        src={isVisible ? videoUrl : undefined}
+        autoPlay={isVisible}
         loop
         muted
         playsInline
+        preload="none"
         controls={false}
         controlsList="nodownload noplaybackrate"
         disablePictureInPicture
