@@ -149,7 +149,7 @@ export const SERVICES_DATA = [
     id: 'va',
     label: 'Virtual Assistance',
     tagline: 'Reliable Executive, Operational & Creative Support',
-    description: 'I provide dedicated virtual assistant services to empower businesses and executives. From in-depth research, email and calendar management, and CRM maintenance to creative digital graphics, video editing, and automated workflows, I ensure seamless daily operations.',
+    description: 'I provide dedicated virtual assistant support that helps businesses and executives stay organized and operate smoothly. I handle in‑depth research, email and calendar management, customer data updates, and Excel tracking with accuracy and attention to detail. I also create digital graphics, enhance images, and edit simple videos to support branding and content needs. My goal is to make daily operations easier, clearer, and more efficient.',
     bulletPoints: [
       'Customer support and client assistance across chat, email, and social platforms',
       'Accurate data entry, record management, and spreadsheet organization using Google Sheets & Excel',
