@@ -18,7 +18,7 @@ export const PERSONAL_INFO = {
   location: 'Consuelo, Cantilan, Surigao del Sur, Philippines',
   timezone: 'GMT+8 (PHT)',
   status: 'Available for Virtual Assistant & Front End Web Developer Roles',
-  bio: "Ready to keep your operations running smoothly and bring your digital vision to life. I provide reliable administrative assistance, basic design support, and responsive frontend web development.",
+  bio: "Ready to keep your operations running smoothly and bring your digital vision to life. I provide reliable administrative assistance, basic video editing and design support, and responsive frontend web development.",
   avatarUrl: '/profilePicture.png',
   logoUrl: '/logo.svg',
   resumeUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/view?usp=sharing',
@@ -154,6 +154,7 @@ export const SERVICES_DATA = [
       'Customer support and client assistance across chat, email, and social platforms',
       'Accurate data entry, record management, and spreadsheet organization using Google Sheets & Excel',
       'Basic graphic design for social media posts, reports, and digital materials',
+      'Light video editing for marketing content, social media, and client materials',
       'Task coordination, documentation, and workflow support for daily operations'
     ],
     tools: [
