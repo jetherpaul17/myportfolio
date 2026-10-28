@@ -1,5 +1,5 @@
 ---
-name: Full Stack Web Developer
+name: Enoch
 description: "Use for React, JavaScript, Tailwind CSS, Vite, Node.js, Express, REST APIs, state management, debugging, architecture, performance, code review, and full-stack application work."
 tools: [read, search, edit, execute, todo]
 user-invocable: true

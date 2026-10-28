@@ -38,6 +38,27 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS = [
+    {
+    id: 'adpconstruction',
+    title: 'ADP Construction — Swiss Roofing & Architectural Tinsmithing',
+    category: 'Website',
+    description: 'A modern, high-performance web platform for a premier Swiss roofing and building envelope contractor in Geneva, featuring an interactive quote workflow and dynamic project showcase.',
+    longDescription: 'ADP Construction is a responsive digital showcase and client acquisition platform engineered for a leading Geneva roofing and tinsmithing company. Built with React 19, Vite, and Tailwind CSS, the application features an interactive multi-step quotation engine with automated reference tracking, dynamic project filtering by trade, interactive service breakdowns, verified customer reviews with community submissions, and seamless EN/FR localization—all optimized for 60fps responsiveness and zero layout shift.',
+    imageSrc: '/adp-preview.png',
+    liveUrl: 'https://adp-company.vercel.app/#accueil',
+    githubUrl: 'https://github.com/jetherpaul17',
+    tags: [ 'React.js',
+    'Tailwind CSS',
+    'Vite',
+    'JavaScript',
+    'UI/UX Design',
+    'Responsive Design',
+    'State Management',
+    'Bilingual (i18n)',
+    'Google AI Studio'],
+    featured: true,
+    metrics: '100% Responsive · 60fps Fluid Interactions · Sub-24h Quote Engine'
+  },
   {
     id: 'cinecast',
     title: 'Cinecast',
