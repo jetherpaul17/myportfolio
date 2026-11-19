@@ -268,8 +268,8 @@ export const SERVICES_DATA = [
 ];
 
 export const RESUME_DATA = {
-  driveUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/view?usp=sharing',
-  embedUrl: 'https://drive.google.com/file/d/1ePkZheWOq0V-Q9iUp82wScjbYICtZWt5/preview',
+  driveUrl: 'https://drive.google.com/file/d/1DJYEHZuHHm-nFYF-qQP8VSnU6qTXiRFA/view?usp=sharing',
+  embedUrl: 'https://drive.google.com/file/d/1DJYEHZuHHm-nFYF-qQP8VSnU6qTXiRFA/view?usp=sharing',
   fileName: 'Jether_Paul_T_Quintana_Resume.pdf',
   summary: 'Dedicated Virtual Assistant and Front End Web Developer with 5+ years proven expertise in remote operational support, digital asset creation, high-throughput content moderation (700+ daily), international customer support, and modern React web development. Adept at boosting executive efficiency, managing complex workflows, and crafting responsive user interfaces.',
   education: [
